@@ -1,7 +1,7 @@
 /******************************************************************
- *      ì¤€ì—°ë™í˜• ë¹„ë¡€ ëŒ€í‘œì œ(Quasi-interlocking proportional)ë¥¼     *
- *      ì—°ë™í˜• ìº¡(interlocking cap): 30ì„ì— ì ìš©                    *
- *      ë‚˜ë¨¸ì§€ 17ì„ì€ ë³‘ë ¬í˜• ë¹„ë¡€(parallel proportional) ì ìš©        *
+ *      ÁØ¿¬µ¿Çü ºñ·Ê ´ëÇ¥Á¦(Quasi-interlocking proportional)¸¦     *
+ *      ¿¬µ¿Çü Ä¸(interlocking cap): 30¼®¿¡ Àû¿ë                    *
+ *      ³ª¸ÓÁö 17¼®Àº º´·ÄÇü ºñ·Ê(parallel proportional) Àû¿ë        *
  *******************************************************************/
 
 var parties = {
@@ -110,26 +110,26 @@ function Cal() {
     }
 }
 
-// ë³€ìˆ˜ë“¤ ì •ë¦¬
-const TOTAL_SEATS = 300;                    // êµ­íšŒ ì˜ì„ìˆ˜
+// º¯¼öµé Á¤¸®
+const TOTAL_SEATS = 300;                    // ±¹È¸ ÀÇ¼®¼ö
 const LIMIT_RATE = 100;
-const LIMIT_LOCAL_SEAT = 253;               // ì§€ì—­êµ¬ ì˜ì„ìˆ˜ ìƒí•œ
-const INTERLOCKING_CAP = 30;                // ì—°ë™í˜• ìº¡
-const PARALLEL_PROPORTIONAL_SEATS = 17;     // ë³‘ë ¬í˜• ë¹„ë¡€ ì˜ì„ìˆ˜
+const LIMIT_LOCAL_SEAT = 253;               // Áö¿ª±¸ ÀÇ¼®¼ö »óÇÑ
+const INTERLOCKING_CAP = 30;                // ¿¬µ¿Çü Ä¸
+const PARALLEL_PROPORTIONAL_SEATS = 17;     // º´·ÄÇü ºñ·Ê ÀÇ¼®¼ö
 
-// ì¤€ì—°ë™í˜• ë¹„ë¡€ì˜ì„ìˆ˜(Quasi-interlocking proportional Seat; QIPSeatss) ê³„ì‚° 
-// í™˜ì‚°ì˜ì„(Converted Seats : í™˜ì‚°ì‹ì„ í†µí•´ êµ¬í•œ ì˜ì„ ìˆ˜ ê°’)ì„ ë°˜ì˜¬ë¦¼ í•œë‹¤.
-// divSeat    : ì—°ë™ë°°ë¶„ì˜ì„ìˆ˜ (ì˜ì„ í• ë‹¹ì •ë‹¹ì— ë°°ë¶„í•  ì˜ì„ìˆ˜)
-// voteRate   : ë“í‘œìœ¨
-// localSeats : ì§€ì—­êµ¬ ì˜ì„ìˆ˜
+// ÁØ¿¬µ¿Çü ºñ·ÊÀÇ¼®¼ö(Quasi-interlocking proportional Seat; QIPSeatss) °è»ê 
+// È¯»êÀÇ¼®(Converted Seats : È¯»ê½ÄÀ» ÅëÇØ ±¸ÇÑ ÀÇ¼® ¼ö °ª)À» ¹İ¿Ã¸² ÇÑ´Ù.
+// divSeat    : ¿¬µ¿¹èºĞÀÇ¼®¼ö (ÀÇ¼® ÇÒ´çÁ¤´ç¿¡ ¹èºĞÇÒ ÀÇ¼®¼ö)
+// voteRate   : µæÇ¥À²
+// localSeats : Áö¿ª±¸ ÀÇ¼®¼ö
 function CalConvertedSeats(divSeatsNum, voteRate, localSeats) {
-    if(localSeats < 5 && voteRate < 3.00) { // ë¹„ì˜ì„í• ë‹¹ì •ë‹¹
+    if(localSeats < 5 && voteRate < 3.00) { // ºñÀÇ¼®ÇÒ´çÁ¤´ç
         return 0;
     }
     return (divSeatsNum * voteRate * 0.01 - localSeats) / 2
 }
 function DivQIPSeats(divSeatsNum, voteRate, localSeats) {
-    // ì‚°ì¶œì‹œ ì†Œìˆ˜ì  ì²«ì§¸ ìë¦¬ì—ì„œ ë°˜ì˜¬ë¦¼ -> ì‚°ì¶œê²°ê³¼ê°€ 1ë³´ë‹¤ ì‘ì„ê²½ìš° 0ìœ¼ë¡œ ì²˜ë¦¬
+    // »êÃâ½Ã ¼Ò¼öÁ¡ Ã¹Â° ÀÚ¸®¿¡¼­ ¹İ¿Ã¸² -> »êÃâ°á°ú°¡ 1º¸´Ù ÀÛÀ»°æ¿ì 0À¸·Î Ã³¸®
     var result = Math.round(CalConvertedSeats(divSeatsNum, voteRate, localSeats));
     if(result < 1) {
         return 0;
@@ -138,16 +138,16 @@ function DivQIPSeats(divSeatsNum, voteRate, localSeats) {
     }
 }
 
-// ì˜ì„ì„ ë¶„ë°°í• ë•Œ ì •ìˆ˜ë¡œ ë¶„ë°°í•œë’¤ ì—¬ì„ì„ ì†Œìˆ˜ë¡œ ì¬ë¶„ë°°
-// datas       : ìˆ˜ì‹ ê²°ê³¼ ë°ì´í„°ë¥¼ ë‹´ì€ ë°°ì—´
-// divSeatsNum : ì±„ì›Œì•¼í•˜ëŠ” ì˜ì„ ìˆ˜
+// ÀÇ¼®À» ºĞ¹èÇÒ¶§ Á¤¼ö·Î ºĞ¹èÇÑµÚ ¿©¼®À» ¼Ò¼ö·Î ÀçºĞ¹è
+// datas       : ¼ö½Ä °á°ú µ¥ÀÌÅÍ¸¦ ´ãÀº ¹è¿­
+// divSeatsNum : Ã¤¿ö¾ßÇÏ´Â ÀÇ¼® ¼ö
 function divSeats(datas, divSeatsNum){
-    // ë¶„ë°°ë˜ì–´ ì¦ê°€í•œ ì˜ì„ìˆ˜ë¥¼ ë‹´ì€ ë°°ì—´
+    // ºĞ¹èµÇ¾î Áõ°¡ÇÑ ÀÇ¼®¼ö¸¦ ´ãÀº ¹è¿­
     var distributed = datas.map(function(n){
         return 0;
     });
 
-    // ì”ì—¬ì„ ë¶„ë°°(ì •ìˆ˜ì˜ ì˜ì„)
+    // ÀÜ¿©¼® ºĞ¹è(Á¤¼öÀÇ ÀÇ¼®)
     datas.forEach(function(n, i) {
         if(n < 0) {
             n = 0;
@@ -158,7 +158,7 @@ function divSeats(datas, divSeatsNum){
         }
     });
 
-    // ì†Œìˆ˜ì  ì•„ë˜ ë¶€ë¶„ ì²˜ë¦¬ë¥¼ ìœ„í•´ ë°°ì—´ ë³€í™˜
+    // ¼Ò¼öÁ¡ ¾Æ·¡ ºÎºĞ Ã³¸®¸¦ À§ÇØ ¹è¿­ º¯È¯
     datas = datas.map(function(n) {
         return n - Math.floor(n);
     }).map(function(n,i){
@@ -170,7 +170,7 @@ function divSeats(datas, divSeatsNum){
         return n['index'];
     });
 
-    // ì”ì—¬ì˜ì„ ë¶„ë°° (ì†Œìˆ˜ ì²˜ë¦¬)
+    // ÀÜ¿©ÀÇ¼® ºĞ¹è (¼Ò¼ö Ã³¸®)
     i = 0
     while(divSeatsNum > 0) {
         if( datas[i] >= 0 ) {
@@ -184,27 +184,27 @@ function divSeats(datas, divSeatsNum){
     return distributed
 }
 
-// ë¹„ì˜ì„í• ë‹¹ ì •ë‹¹ êµ¬í•˜ëŠ” í•¨ìˆ˜
+// ºñÀÇ¼®ÇÒ´ç Á¤´ç ±¸ÇÏ´Â ÇÔ¼ö
 function NotIncludedParty(parties) {
-    // ë¹„ì˜ì„í• ë‹¹ ì •ë‹¹ ìˆ˜
+    // ºñÀÇ¼®ÇÒ´ç Á¤´ç ¼ö
     var sumOfLocalSeats = 0;
 
-    // ì§€ì—­êµ¬ ì˜ì„ìˆ˜ê°€ 5ì„ ë¯¸ë§Œì´ê³  ë“í‘œìœ¨ì´ 3% ë¯¸ë§Œì¸ ê²½ìš° í¬í•¨
+    // Áö¿ª±¸ ÀÇ¼®¼ö°¡ 5¼® ¹Ì¸¸ÀÌ°í µæÇ¥À²ÀÌ 3% ¹Ì¸¸ÀÎ °æ¿ì Æ÷ÇÔ
     parties.localSeats.forEach(function(n,i) {
         if(n < 5 && parties.voteRate[i] < 3.00) {
             sumOfLocalSeats += n;
         } else if(parties.voteRate[i] == 0) {
-            sumOfLocalSeats += n;       // ë¬´ì†Œì† ì •ë‹¹ ì—¬ê¸° í¬í•¨
+            sumOfLocalSeats += n;       // ¹«¼Ò¼Ó Á¤´ç ¿©±â Æ÷ÇÔ
         }
     })
 
     return sumOfLocalSeats
 }
 
-// ê³„ì‚° ë²„íŠ¼ ëˆ„ë¥¼ì‹œ ì‹¤í–‰í•  í•¨ìˆ˜
-// parties : ì •ë‹¹ë“¤ì˜ ì •ë³´ë¥¼ ë‹´ì€ ê°ì²´
+// °è»ê ¹öÆ° ´©¸¦½Ã ½ÇÇàÇÒ ÇÔ¼ö
+// parties : Á¤´çµéÀÇ Á¤º¸¸¦ ´ãÀº °´Ã¼
 function DivSeatWithVoteRatio(parties) {
-    // ì§€ì—­êµ¬ ì˜ì„ìˆ˜ í•©ì‚° + ë¹„ì˜ì„í• ë‹¹ì •ë‹¹ì˜ ì§€ì—­êµ¬ ì˜ì„ìˆ˜ í•©ì‚°
+    // Áö¿ª±¸ ÀÇ¼®¼ö ÇÕ»ê + ºñÀÇ¼®ÇÒ´çÁ¤´çÀÇ Áö¿ª±¸ ÀÇ¼®¼ö ÇÕ»ê
     const sumOfLocalSeats = parties.localSeats.reduce(function(pre, current) {
         return pre + current
     });
@@ -214,16 +214,16 @@ function DivSeatWithVoteRatio(parties) {
     })
     console.log(sumOfVoteRate)
     if(sumOfVoteRate - LIMIT_RATE > 0.01) {
-        throw new Error('ì •ë‹¹ë“í‘œìœ¨ì˜ í•©ì´ 100%ë¥¼ ë„˜ì—ˆìŠµë‹ˆë‹¤.');
+        throw new Error('Á¤´çµæÇ¥À²ÀÇ ÇÕÀÌ 100%¸¦ ³Ñ¾ú½À´Ï´Ù.');
     }
     
     if(sumOfLocalSeats != LIMIT_LOCAL_SEAT) {
         if(sumOfLocalSeats > LIMIT_LOCAL_SEAT ) {
             console.log('higher than LIMIT_LOCAL_SEAT(253).');
-            throw new Error('ì§€ì—­êµ¬ ì˜ì›ìˆ˜ê°€ 253ë³´ë‹¤ í½ë‹ˆë‹¤.');
+            throw new Error('Áö¿ª±¸ ÀÇ¿ø¼ö°¡ 253º¸´Ù Å®´Ï´Ù.');
         } else {
             console.log('lower than LIMIT_LOCAL_SEAT(253)')
-            throw new Error('ì§€ì—­êµ¬ ì˜ì›ìˆ˜ê°€ 253ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.');
+            throw new Error('Áö¿ª±¸ ÀÇ¿ø¼ö°¡ 253º¸´Ù ÀÛ½À´Ï´Ù.');
         }
     }
     
@@ -232,7 +232,7 @@ function DivSeatWithVoteRatio(parties) {
 
     
 
-    // 1ë‹¨ê³„: ì¤€ì—°ë™í˜• ë¹„ë¡€ ì˜ì„ìˆ˜ ê³„ì‚° 
+    // 1´Ü°è: ÁØ¿¬µ¿Çü ºñ·Ê ÀÇ¼®¼ö °è»ê 
     const divSeatsNum = TOTAL_SEATS - sumOfNotIncluded;
     parties.QIPSeats = parties.voteRate.map(function(n){ return 0 }).map(function(n,i) {
         return DivQIPSeats(divSeatsNum, parties.voteRate[i], parties.localSeats[i]);
@@ -249,9 +249,9 @@ function DivSeatWithVoteRatio(parties) {
     })
     console.log(sumOfQIPSeats);
 
-    // 2ë‹¨ê³„: ì¤€ì—°ë™í˜• ë¹„ë¡€ ì˜ì„ìˆ˜ ê³„ì‚° -> ì—°ë™í˜• ìº¡ 30ì„ ë§ì¶”ê¸°
+    // 2´Ü°è: ÁØ¿¬µ¿Çü ºñ·Ê ÀÇ¼®¼ö °è»ê -> ¿¬µ¿Çü Ä¸ 30¼® ¸ÂÃß±â
     if(sumOfQIPSeats < INTERLOCKING_CAP) {
-        // 30ë³´ë‹¤ ì‘ì•„ ì—¬ì„ì´ ìˆëŠ”ê²½ìš°
+        // 30º¸´Ù ÀÛ¾Æ ¿©¼®ÀÌ ÀÖ´Â°æ¿ì
         console.log()
         console.log('***********lower than 30***********')
         var leftSeats = INTERLOCKING_CAP - sumOfQIPSeats;
@@ -263,7 +263,7 @@ function DivSeatWithVoteRatio(parties) {
 
         var increase = divSeats(adjusted, leftSeats);
         
-        // ë°°ë¶„ëœ ì˜ì„ìˆ˜ ì ìš©
+        // ¹èºĞµÈ ÀÇ¼®¼ö Àû¿ë
         parties.QIPSeats = parties.QIPSeats.map(function(n,i) {
             return n + increase[i];
         })
@@ -280,7 +280,7 @@ function DivSeatWithVoteRatio(parties) {
         console.log(sumOfQIPSeats);
 
     } else if(sumOfQIPSeats > INTERLOCKING_CAP) {
-        // 30ë³´ë‹¤ ì»¤ì„œ 30ì„ì— ë§ì¶° ë‹¤ì‹œ êµ¬í•´ì•¼ í•˜ëŠ” ê²½ìš°
+        // 30º¸´Ù Ä¿¼­ 30¼®¿¡ ¸ÂÃç ´Ù½Ã ±¸ÇØ¾ß ÇÏ´Â °æ¿ì
         console.log()
         console.log('***********higher than 30***********')
 
@@ -291,7 +291,7 @@ function DivSeatWithVoteRatio(parties) {
             return temp;
         })
 
-        // ë°°ë¶„ëœ ì˜ì„ìˆ˜ ì ìš©
+        // ¹èºĞµÈ ÀÇ¼®¼ö Àû¿ë
         parties.QIPSeats = divSeats(parties.QIPSeats,INTERLOCKING_CAP);
 
         // DEBUG
@@ -306,20 +306,20 @@ function DivSeatWithVoteRatio(parties) {
         console.log(sumOfQIPSeats);
 
     } else {
-        // 30ì„ì¸ ê²½ìš°
+        // 30¼®ÀÎ °æ¿ì
         console.log()
         console.log('***********exactly 30!***********')
     }
 
-    // 3ë‹¨ê³„: ë³‘ë ¬í˜• 17ì„ ê³„ì‚° 
+    // 3´Ü°è: º´·ÄÇü 17¼® °è»ê 
     parties.PPSeats = parties.voteRate.map(function(n,i){
-        if(parties.localSeats[i] < 5 && parties.voteRate[i] < 3.00) { // ë¹„ì˜ì„í• ë‹¹ì •ë‹¹
+        if(parties.localSeats[i] < 5 && parties.voteRate[i] < 3.00) { // ºñÀÇ¼®ÇÒ´çÁ¤´ç
             return 0;
         }
         return PARALLEL_PROPORTIONAL_SEATS * parties.voteRate[i] * 0.01;
     });
 
-    // ë°°ë¶„ëœ ì˜ì„ìˆ˜ ì ìš©
+    // ¹èºĞµÈ ÀÇ¼®¼ö Àû¿ë
     parties.PPSeats = divSeats(parties.PPSeats,PARALLEL_PROPORTIONAL_SEATS);
 
     // DEBUG
@@ -328,7 +328,7 @@ function DivSeatWithVoteRatio(parties) {
     })
 
     parties.calTotalSeats();
-    // ìµœì¢… ê°ì²´ í™•ì¸
+    // ÃÖÁ¾ °´Ã¼ È®ÀÎ
     console.log(parties);
 };
 /*
@@ -349,6 +349,5 @@ var parties = {
         }
     }
 }
-
 DivSeatWithVoteRatio(parties);
 */
