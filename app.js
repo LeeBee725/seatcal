@@ -106,7 +106,7 @@ function Cal() {
         document.getElementById('sumOfPP').textContent = sumOfPP;
         document.getElementById('sumOfTotalSeat').textContent = sumOfTotalSeat;
     } catch(e) {
-        alert(`${e.message}`);
+        alert(e.message);
     }
 }
 
