@@ -1,0 +1,34 @@
+#page-wrapper{
+    width: 1200px;
+    margin:0 auto;
+  }
+  
+  #main-header{
+    margin: 0 auto;
+    background-color: gray;
+  }
+  
+  #main-table{
+    width:100%;
+  }
+  
+  .center{
+    text-align: center;
+  }
+  
+  .radius{
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  .half{
+    width: 50%;
+  }
+
+  #calBtn{
+      width: 200px;
+      height: 80px;
+      float : right;
+      border-radius: 30px 30px 30px 30px;
+      background-color: magenta;
+      font-size: 30px;
+  }
