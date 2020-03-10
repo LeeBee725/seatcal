@@ -212,11 +212,11 @@ function DivSeatWithVoteRatio(parties) {
     const sumOfVoteRate = parties.voteRate.reduce(function(pre, current) {
         return pre + current
     })
-    
+    console.log(sumOfVoteRate)
     if(sumOfVoteRate - LIMIT_RATE > 0.01) {
         throw new Error('정당득표율의 합이 100%를 넘었습니다.');
     }
-
+    
     if(sumOfLocalSeats != LIMIT_LOCAL_SEAT) {
         if(sumOfLocalSeats > LIMIT_LOCAL_SEAT ) {
             console.log('higher than LIMIT_LOCAL_SEAT(253).');

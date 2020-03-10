@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Practice</title>
+  <title>SeatCal</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -10,112 +10,122 @@
 <body>
   <div id="page-wrapper">
     <header id="main-header">
-      <h1 class="title">ì˜ì„ ìˆ˜ ê³„ì‚°ê¸°</h1>
-      <h2  class="sub-title">ì¤€ì—°ë™í˜• ë¹„ë¡€ëŒ€í‘œì œ ì ìš©</h2>
+        <div id="banner_img">
+            <div id="banner_logo">
+            <a href="http://www.newspost.kr/"><img id="banner_logo_img" src="./img02.png"></img></a>
+            </div>
+            <div id="banner_txt">
+                <div class="sub-title ">?—°?™?˜• ë¹„ë??????‘œ? œ ?•œ?ˆˆ?— ë³´ëŠ”</div>
+                <div class="title">21??? ì´ì„  ?˜?„?ˆ˜ ê³„ì‚°ê¸?</div>
+            </div>
+            <div id="banner_link">
+                <a href="http://www.newspost.kr/"> <img id="banner_link_img" src="./img06.png"></img></a>
+            </div>
+        </div>
     </header>
     <div id="content">
-      <table id="main-table" class="center" border="1">
+      <table id="main-table" class="center" cellspacing="0">
         <tr>
-          <td><div>ì •ë‹¹</div></td>
-          <td><div>ì •ë‹¹ë“í‘œìœ¨(%)</div></td>
-          <td><div>ì§€ì—­êµ¬ ì˜ì„ìˆ˜(ê°œ)</div></td>
-          <td><div>ì¤€ì—°ë™í˜• ë¹„ë¡€</div></td>
-          <td><div>ë³‘ë¦½í˜• ë¹„ë¡€</div></td>
-          <td><div>ì˜ì„ìˆ˜</div></td>
-          <td><div>ì˜ì„ ë¹„ìœ¨(%)</div></td>
+          <td><div>? •?‹¹</div></td>
+          <td><div>? •?‹¹?“?‘œ?œ¨(%)</div></td>
+          <td><div>ì§??—­êµ? ?˜?„?ˆ˜(ê°?)</div></td>
+          <td><div>ì¤??—°?™?˜• ë¹„ë??</div></td>
+          <td><div>ë³‘ë¦½?˜• ë¹„ë??</div></td>
+          <td><div>?˜?„?ˆ˜</div></td>
+          <td><div>?˜?„ ë¹„ìœ¨(%)</div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 1"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 1" style="background-color:#2e2eb8; border-color:#2e2eb8;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="25.54"></div></td>
           <td><div><input type="text" class="center half localSeats" value="110"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#2e2eb8;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" id="" class="center half partyName" value="ì •ë‹¹ 2"></div></td>
+          <td><div><input type="text" id="" class="center half partyName" value="? •?‹¹ 2" style="background-color:#ff1a75; border-color:#ff1a75;"></div></td>
           <td><div><input type="text" id="" class="center half voteRate" value="33.5"></div></td>
           <td><div><input type="text" id="" class="center half localSeats" value="105"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#ff1a75;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 3"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 3" style="background-color:#ffcc00; border-color:#ffcc00;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="26.79"></div></td>
           <td><div><input type="text" class="center half localSeats" value="25"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#ffcc00;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 4"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 4" style="background-color:#e65c00; border-color:#e65c00;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="14.17"></div></td>
           <td><div><input type="text" class="center half localSeats" value="2"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#e65c00;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 5"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 5" style="background-color:#00e600; border-color:#00e600;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="0"></div></td>
           <td><div><input type="text" class="center half localSeats" value="0"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#00e600;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 6"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 6" style="background-color:#ff0000; border-color:#ff0000;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="0"></div></td>
           <td><div><input type="text" class="center half localSeats" value="0"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#ff0000;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 7"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 7" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="0"></div></td>
           <td><div><input type="text" class="center half localSeats" value="0"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 8"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 8" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="0"></div></td>
           <td><div><input type="text" class="center half localSeats" value="0"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="text" class="center half partyName" value="ì •ë‹¹ 9"></div></td>
+          <td><div><input type="text" class="center half partyName" value="? •?‹¹ 9" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
           <td><div><input type="text" class="center half voteRate" value="0"></div></td>
           <td><div><input type="text" class="center half localSeats" value="0"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div><input type="hidden" class="center half partyName" value="ë¬´ì†Œì†"/>ë¬´ì†Œì†</div></td>
+          <td><div><input type="text" disabled class="center half partyName" value="ë¬´ì†Œ?†" style="background-color:#8c8c8c; border-color:#8c8c8c;"/></div></td>
           <td><div><input type="hidden" class="center half voteRate" value="0" />0</div></td>
           <td><div><input type="text" class="center half localSeats" value="11"></div></td>
           <td><div class="qip"></div></td>
           <td><div class="pp"></div></td>
-          <td><div class="totalSeat"></div></td>
+          <td><div class="totalSeat half" style="background-color:#8c8c8c;"></div></td>
           <td><div class="seatRatio"></div></td>
         </tr>
         <tr>
-          <td><div>í•©ê³„</div></td>
+          <td><div>?•©ê³?</div></td>
           <td><div id="sumOfRatio"></div></td>
           <td><div id="sumOfLocalSeats"></div></td>
           <td><div id="sumOfQIP"></div></td>
@@ -124,7 +134,7 @@
           <td><div id="sumOfSeatRatio"></div></td>
         </tr>
       </table>
-      <input type="button" value="ê³„ì‚°í•˜ê¸°" id="calBtn"/>
+      <input type="button" value="ê³„ì‚°?•˜ê¸?" id="calBtn"/>
     </div>
     <footer id="main-footer">
       <p></p>

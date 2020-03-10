@@ -1,34 +1,148 @@
-#page-wrapper{
-    width: 1200px;
-    margin:0 auto;
-  }
-  
-  #main-header{
-    margin: 0 auto;
-    background-color: gray;
-  }
-  
-  #main-table{
-    width:100%;
-  }
-  
-  .center{
-    text-align: center;
-  }
-  
-  .radius{
-    border-radius: 5px 5px 5px 5px;
-  }
-  
-  .half{
-    width: 50%;
-  }
+*{
+  margin : 0;
+  padding : 0;
+}
+#main-header{
+  position: relative;
+  padding-top: 20%;
+}
 
-  #calBtn{
-      width: 200px;
-      height: 80px;
-      float : right;
-      border-radius: 30px 30px 30px 30px;
-      background-color: magenta;
-      font-size: 30px;
-  }
+#banner_img {
+  position: absolute;
+  background-image: url('./img03.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* 로고관련 */
+#banner_logo{
+  width: 20%;
+  position: absolute;
+  transform: translate(10%,100%);
+}
+
+#banner_logo_img{
+  width: 50%;
+}
+
+/* 제목관련 */
+#banner_txt{
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+@font-face{
+  font-family: NotoSansKR_Bold;
+  src:url('./Noto_Sans_KR/NotoSansKR-Bold.otf');
+}
+
+@font-face{
+  font-family: NotoSansKR_Thin;
+  src:url('./Noto_Sans_KR/NotoSansKR-Thin.otf')
+}
+
+.title{
+  font-family: NotoSansKR_Bold;
+  color: rgba(255, 255, 255, 0.897);
+  font-size: 4vw;
+  letter-spacing: -25;
+}
+
+.sub-title{
+  font-family: NotoSansKR_Thin;
+  color: rgba(255, 255, 255, 0.897);
+  font-size: 2vw;
+  letter-spacing: -25;
+}
+
+/* 바로가기 관련 */
+#banner_link {
+  position: absolute;
+  top:20%;
+  left:80%;
+}
+
+#banner_link_img{
+  width: 80%
+}
+
+/* 표 */
+#content{
+  width: 70%;
+  margin:0 auto;
+  margin-top: 30px;
+}
+
+#main-table{
+  width: 100%;
+  border: none;
+}
+
+#main-table tr{
+  height: 40px;
+}
+
+#main-table td{
+  width:100px;
+}
+
+.center{
+  text-align: center;
+}
+
+.half{
+  width: 50%;
+  height: 30px;
+}
+
+#calBtn{
+  margin: 5px 0px 0px 0px;
+  width: 100px;
+  height: 50px;
+  float: right;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #a1b3aa;
+  font-size: 15px;
+  font-weight: bold;
+  outline:0;
+}
+
+#main-table  tr:first-child, #main-table tr:last-child{
+  background-color: #2e2e1f;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(2n){
+  background-color: #e6e6e6;
+}
+tr:nth-child(2n+1):hover{
+  background-color:#cccccc;
+}
+
+.partyName{
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.totalSeat{
+  color: white;
+  font-weight: bold;
+  border-radius: 7px 7px 7px 7px;
+  line-height: 30px;
+  display: inline-block;
+}
+
+div > input[type=text]{
+  border-radius:  7px 7px 7px 7px;
+  border-style: solid;
+}
