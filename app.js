@@ -153,14 +153,14 @@ function divSeats(datas, divSeatsNum){
             n = 0;
         }
         if(n > 0) {
-            divSeatsNum -= Math.trunc(n);
-            distributed[i] += Math.trunc(n);
+            divSeatsNum -= Math.floor(n);
+            distributed[i] += Math.floor(n);
         }
     });
 
     // 소수점 아래 부분 처리를 위해 배열 변환
     datas = datas.map(function(n) {
-        return n - Math.trunc(n);
+        return n - Math.floor(n);
     }).map(function(n,i){
         if( n > 0 ) return {value: n, index: i};
         else return {value: 0, index: -1}
