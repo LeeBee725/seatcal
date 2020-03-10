@@ -213,7 +213,7 @@ function DivSeatWithVoteRatio(parties) {
         return pre + current
     })
     
-    if(sumOfVoteRate > LIMIT_RATE) {
+    if(sumOfVoteRate - LIMIT_RATE > 0.01) {
         throw new Error('정당득표율의 합이 100%를 넘었습니다.');
     }
 
