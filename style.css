@@ -9,7 +9,7 @@
 
 #banner_img {
   position: absolute;
-  background-image: url('./img03.jpg');
+  background-image: url('./resource/img/img_bg.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   top: 0;
@@ -41,46 +41,87 @@
 
 @font-face{
   font-family: NotoSansKR_Bold;
-  src:url('./Noto_Sans_KR/NotoSansKR-Bold.otf');
-}
-
-@font-face{
-  font-family: NotoSansKR_Thin;
-  src:url('./Noto_Sans_KR/NotoSansKR-Thin.otf')
+  src:url('./resource/font/NotoSansKR-Bold.otf');
 }
 
 .title{
   font-family: NotoSansKR_Bold;
   color: rgba(255, 255, 255, 0.897);
   font-size: 4vw;
-  letter-spacing: -25;
+  letter-spacing: -0.25px;
+}
+
+@font-face{
+  font-family: NotoSansKR_Thin;
+  src:url('./resource/font/NotoSansKR-Thin.otf')
 }
 
 .sub-title{
   font-family: NotoSansKR_Thin;
-  color: rgba(255, 255, 255, 0.897);
+  color: rgba(255, 255, 255, 0.65);
   font-size: 2vw;
-  letter-spacing: -25;
+  letter-spacing: -0.25px;
+  line-height: 0px;
 }
 
 /* 바로가기 관련 */
 #banner_link {
   position: absolute;
   top:20%;
-  left:80%;
+  right:7%;
+}
+
+#banner_link_txt{
+  float: left;
+  position: relative;
+  padding-right: 0.5vw;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: right;
+  font-family: NotoSansKR_Thin;
+  font-size: 1.4vw;
+  letter-spacing: -0.25px;
+  line-height: 1.87vw;
 }
 
 #banner_link_img{
-  width: 80%
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
-/* 표 */
+/* 본문내용 */
 #content{
-  width: 70%;
+  max-width: 1170px;
   margin:0 auto;
   margin-top: 30px;
 }
 
+@font-face{
+  font-family: NotoSansKR_Regular;
+  src:url('./resource/font/NotoSansKR-Regular.otf')
+}
+
+#content_txt {
+  text-align: center;
+  font-size: 1.5vw;
+  letter-spacing: -0.18vw;
+  font-family: NotoSansKR_Regular;
+}
+
+.text_bold{
+  font-weight: bold;
+}
+
+#content_vertical_line{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  height: 10vw;
+  width: 50%;
+  border-right: 0.11vw dashed;
+}
+
+/* 표 */
 #main-table{
   width: 100%;
   border: none;
@@ -109,7 +150,8 @@
   height: 50px;
   float: right;
   border-radius: 10px 10px 10px 10px;
-  background-color: #a1b3aa;
+  color: white;
+  background-color: #2e2e1f;
   font-size: 15px;
   font-weight: bold;
   outline:0;
@@ -145,4 +187,11 @@ tr:nth-child(2n+1):hover{
 div > input[type=text]{
   border-radius:  7px 7px 7px 7px;
   border-style: solid;
+}
+
+#content_guide {
+  margin-top: 2vw;
+  margin-left: 0.5vw;
+  font-family: NotoSansKR_Regular;
+  font-size: 1.3vw;
 }

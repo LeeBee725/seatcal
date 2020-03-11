@@ -12,18 +12,37 @@
     <header id="main-header">
         <div id="banner_img">
             <div id="banner_logo">
-            <a href="http://www.newspost.kr/"><img id="banner_logo_img" src="./img02.png"></img></a>
+            <a href="http://www.newspost.kr/"><img id="banner_logo_img" src="./resource/img/img_logo.png"></img></a>
             </div>
             <div id="banner_txt">
                 <div class="sub-title ">연동형 비례대표제 한눈에 보는</div>
                 <div class="title">21대 총선 의석수 계산기</div>
             </div>
             <div id="banner_link">
-                <a href="http://www.newspost.kr/"> <img id="banner_link_img" src="./img06.png"></img></a>
+                <a href="#" id="banner_link_txt" style="text-decoration: none">
+                  <div>
+                    4ㆍ15총선<br/>
+                    비례대표 특집<br/>
+                  </div>
+                  <div style="color: #a4832b">
+                    바로보기
+                  </div>
+                </a>
+                <a href="#" id="banner_link_img" > <img src="./resource/img/img_link.png" style="width: 3.5vw; display: block"></img></a>
             </div>
         </div>
     </header>
     <div id="content">
+      <div id="content_txt">
+        <img src="./resource/img/img_content.jpg" style="width: 18%; padding-bottom: 1vw;"></img>
+        <p class="text_bold" style="font-size: 1.8vw;"><br/>"연동형 비례제, 그래서 ◯◯당은 몇 석인데?"</p>
+        <p style="color: blue;"><br/>대한민국 국회의원 300명, 그 중 비례대표는 47명.</p>
+        <p><br/>공직선거법이 개정되면서 비례대표 의석 배분 방법이 아주 복잡해졌습니다.</p>
+        <p>47석 중 30석에는 <span class="text_bold">준연동형 비례대표제</span>를 적용하고,</p>
+        <p>나머지 17석은 기존 선거법인 병립형을 적용해서 계산해야 합니다.</p>
+        <p><span class="text_bold"><뉴스포스트> 의석수 계산기</span>를 통해 예상해보세요.</p>
+        <div id="content_vertical_line"></div>
+      </div>
       <table id="main-table" class="center" cellspacing="0">
         <tr>
             <td><div>정당</div></td>
@@ -35,84 +54,84 @@
             <td><div>의석 비율(%)</div></td>
         </tr>
         <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 1" style="background-color:#2e2eb8; border-color:#2e2eb8;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 1" style="background-color:#00479d; border-color:#00479d;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="25.54"></div></td>
             <td><div><input type="text" class="center half localSeats" value="110"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#2e2eb8;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#00479d;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" id="" class="center half partyName" value="정당 2" style="background-color:#ff1a75; border-color:#ff1a75;"></div></td>
+            <td><div><input type="text" id="" class="center half partyName" value="정당 2" style="background-color:#e74471; border-color:#e74471;"></div></td>
             <td><div><input type="text" id="" class="center half voteRate" value="33.5"></div></td>
             <td><div><input type="text" id="" class="center half localSeats" value="105"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#ff1a75;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#e74471;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 3" style="background-color:#ffcc00; border-color:#ffcc00;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 3" style="background-color:#ffca08; border-color:#ffca08;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="26.79"></div></td>
             <td><div><input type="text" class="center half localSeats" value="25"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#ffcc00;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#ffca08;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 4" style="background-color:#e65c00; border-color:#e65c00;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 4" style="background-color:#de5612; border-color:#de5612;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="14.17"></div></td>
             <td><div><input type="text" class="center half localSeats" value="2"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#e65c00;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#de5612;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 5" style="background-color:#00e600; border-color:#00e600;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 5" style="background-color:#0ba95f; border-color:#0ba95f;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="0"></div></td>
             <td><div><input type="text" class="center half localSeats" value="0"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#00e600;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#0ba95f;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 6" style="background-color:#ff0000; border-color:#ff0000;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 6" style="background-color:#b01a64; border-color:#b01a64;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="0"></div></td>
             <td><div><input type="text" class="center half localSeats" value="0"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#ff0000;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#b01a64;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 7" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 7" style="background-color:#00a0e9; border-color:#00a0e9;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="0"></div></td>
             <td><div><input type="text" class="center half localSeats" value="0"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#00a0e9;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 8" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 8" style="background-color:#b28850; border-color:#b28850;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="0"></div></td>
             <td><div><input type="text" class="center half localSeats" value="0"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#b28850;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
-            <td><div><input type="text" class="center half partyName" value="정당 9" style="background-color:#008fb3; border-color:#008fb3;"></div></td>
+            <td><div><input type="text" class="center half partyName" value="정당 9" style="background-color:#aa89bd; border-color:#aa89bd;"></div></td>
             <td><div><input type="text" class="center half voteRate" value="0"></div></td>
             <td><div><input type="text" class="center half localSeats" value="0"></div></td>
             <td><div class="qip"></div></td>
             <td><div class="pp"></div></td>
-            <td><div class="totalSeat half" style="background-color:#008fb3;"></div></td>
+            <td><div class="totalSeat half" style="background-color:#aa89bd;"></div></td>
             <td><div class="seatRatio"></div></td>
           </tr>
           <tr>
@@ -135,9 +154,17 @@
           </tr>
         </table>
         <input type="button" value="계산하기" id="calBtn"/>
+      <div id="content_guide">
+        <p class="text_bold" style="font-size: 1.8vw;">사용방법</p>
+        <p><br/>1. 정당명을 입력한 후 각 정당의 예상 정당득표율을 입력합니다.</p>
+        <p>2. 각 정당의 예상 지역구 의석수를 입력합니다.</p>
+        <p>3. 예상 무소속 지역구 의석수를 입력합니다.</p>
+        <p>4. 정당 득표율 합계는 100%가 되어야 합니다.</p>
+        <p>5. ‘계산하기’를 누릅니다.</p>
+      </div>
     </div>
     <footer id="main-footer">
-      <p></p>
+      <div style="height: 5vw;"></div>
     </footer>
   </div>
 
