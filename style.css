@@ -18,7 +18,7 @@
   bottom: 0;
 }
 
-/* ·Î°í°ü·Ã */
+/* ë¡œê³ ê´€ë ¨ */
 #banner_logo{
   width: 20%;
   position: absolute;
@@ -29,7 +29,7 @@
   width: 50%;
 }
 
-/* Á¦¸ñ°ü·Ã */
+/* ì œëª©ê´€ë ¨ */
 #banner_txt{
   position: absolute;
   left: 20%;
@@ -64,7 +64,7 @@
   line-height: 0px;
 }
 
-/* ¹Ù·Î°¡±â °ü·Ã */
+/* ë°”ë¡œê°€ê¸° ê´€ë ¨ */
 #banner_link {
   position: absolute;
   top:20%;
@@ -90,7 +90,7 @@
   transform: translate(0%, -50%);
 }
 
-/* º»¹®³»¿ë */
+/* ë³¸ë¬¸ë‚´ìš© */
 #content{
   max-width: 1170px;
   margin:0 auto;
@@ -116,7 +116,7 @@
   border-right: 0.11vw dashed;
 }
 
-/* Ç¥ */
+/* í‘œ */
 #main-table{
   width: 100%;
   border: none;
