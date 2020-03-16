@@ -52,12 +52,12 @@
 }
 
 @font-face{
-  font-family: NotoSansKR_Thin;
-  src:url('./resource/font/NotoSansKR-Thin.otf')
+  font-family: NotoSansKR_Regular;
+  src:url('./resource/font/NotoSansKR-Regular.otf')
 }
 
 .sub-title{
-  font-family: NotoSansKR_Thin;
+  font-family: NotoSansKR_Regular;
   color: rgba(255, 255, 255, 0.65);
   font-size: 2vw;
   letter-spacing: -0.25px;
@@ -97,14 +97,9 @@
   margin-top: 30px;
 }
 
-@font-face{
-  font-family: NotoSansKR_Regular;
-  src:url('./resource/font/NotoSansKR-Regular.otf')
-}
-
 #content_txt {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.35vw;
   letter-spacing: -0.18vw;
   font-family: NotoSansKR_Regular;
 }
@@ -192,8 +187,9 @@ div > input[type=text]{
 #content_guide {
   margin-top: 2vw;
   margin-left: 0.5vw;
+  margin-bottom: 2vw;
   font-family: NotoSansKR_Regular;
-  font-size: 1.3vw;
+  font-size: 1.17vw;
 }
 
 #index {
