@@ -2,14 +2,17 @@
   margin : 0;
   padding : 0;
 }
+
 #main-header{
   position: relative;
   padding-top: 20%;
 }
 
 #index_banner {
+  display: block;
   width:100%;
   height: 223px;
+  margin-bottom: -5px;
 }
 
 #banner_img {
@@ -21,6 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  padding-top: 0px;
 }
 
 /* 제목관련 */
